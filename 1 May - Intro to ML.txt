@@ -1,0 +1,43 @@
+MACHINE LEARNING 
+     |
+ _________________________________________________________
+|                                                         |
+SUPERVISED LEARNING                                     UNSUPERVISED LEARNNING
+          |                                                       | 
+ _________v___________                                         CLUSTERING
+|                     |
+CLASSIFICATION       REGRESSION
+
+
+
+
+7 STEPS  OF MACHINE LEARNING ==>
+1. GATHERING DATA
+2. PREPARING THAT DATA
+3. CHOOSING A MODEL
+4. TRAINING
+5. EVALUATION
+6. HYPERPARAMETER TUNING
+7. PREDICTION
+
+
+Machine learn using help of library --> sckit learn , xgboost , lgbm
+ML Framework:
+sklearn
+xgboost
+lgbm
+
+
+Training phase 
+Testing phase
+
+
+ML PIPELINE -->
+
+1. We must have dataset to build ML Model
+2. Attribute understanding of the dataset | business understanding clear
+3. Divide the dataset into x-- iv & y-- dv
+4. x --> x-train & x-test
+5. y --> y-train & y-test
+6. Split ratio : 80-20, 70-30, 75-25 
+
