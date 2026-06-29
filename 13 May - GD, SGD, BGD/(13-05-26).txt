@@ -1,0 +1,112 @@
+(13-05-26)
+
+Agenda for today session -->
+
+Feature Scaling
+Bias v/s Variance
+Gradient descend
+Stochastic Gradient descend
+Batch Gradient descend
+
+
+Feature Selection v/s Feature Engineering v/s Feature Scaling
+
+
+Feature Selection ==>
+  columns == attribute == feature == dimension
+  RFE (Recursive Feature Elimination using p-value)
+  lasso regression we have elimination coef are 0
+
+
+
+Feature Engineering ==> EDA Technique
+  Variable Identification | Univariate | Bivariate (Corelation)
+  Missing Value Treatment | Imputation Technique | Outlier treatment
+
+
+
+===============
+Feature Scaling ==>
+===============
+ sklearn.model import preprocessing
+
+It is divided into 2 types -->
+1. Standard Scalar | z-score | range -3 to 3
+2. Normalization | min max scaler | range 0 to 1
+
+
+Normalization is one of feature scaling technique which implement in ML model to get Highest accuracy.  It normalize value & shift it between 0 to 1
+Hence, Normalization also called as ( normalizer OR  min max scaler )
+
+
+Standarization is another feature scaling technique in which 
+  standard scaler because apply z-score
+  In ML , every value are shifted between -3 to 3 
+
+For every model you can apply both ,
+but 1st priority is always given to [ standardization ] bcoz -> it follows GAUSIAN DISTRIBUTION
+then Normalization -> does not follow GAUSIAN DISTRIBUTION
+
+
+close training - low bias
+far testing - high variance
+LOW BIAS HIGH VARIANCE == OVERFITTING
+
+close testing - low variance
+far training - high bias 
+HIGH BIAS LOW VARIANCE == UNDERFIT
+
+
+
+Whatever ML Model we build we must apply Feature Scaling Technique ==>
+
+
+ML few algorithm doesn't  required Feature Scaling such as ===>
+Tree Algorithm -
+  Decision tree
+  Random Forest
+  xgboost
+  lightgbm
+   
+
+Navie Byes -
+ Gausian Navie bayes doesn't required Feature Scaling
+  
+
+
+======================
+Optimization Algorithm ==>
+=======================
+
+
+Gradient descend v/s Stochastic Gradient descend v/s Batch Gradient descend
+
+This 3 concepts we can apply in DL , ML & Gen AI
+
+
+List of Optimizers used in DL & Gen ai ->
+https://keras.io/api/optimizers/
+
+
+{ MAE is also called  LOSS FUNCTION
+  MSE is also called  COST FUNCTION }
+
+
+
+Learning rate --> Step count for one cost to another cost function to reach global minimun,
+if the step count is large we miss the reach global ( take more time )
+MOMENTUM in Gradient Descend
+
+What is Gradient Descend ?
+Gradient descend is an algorithm that finds best fit line for given training data set.
+It is a optimiation algorithm to reach global minimum to find out best fit line.
+GD every records in( 3 datapoints) -- 3 time cost computation
+
+
+Assume , when you work with million point --> will you work manually ?
+so , there is thing called "Stochastic Gradient descend" 
+
+
+Stochastic Gradient descend is reach global by calculate cluster of random point take the mean of it then calculate COST FUNCTION
+
+Batch Gradient descend  is reach global minimum by calude batch of point& take calculate cost function.
