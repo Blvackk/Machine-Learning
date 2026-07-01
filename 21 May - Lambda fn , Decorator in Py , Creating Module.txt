@@ -1,0 +1,21 @@
+(21-05-26)
+
+
+1. Lambda Function
+2. Decorator
+3. Inbuild Module
+
+
+Anonymous Function | Lambda
+
+
+inbuild every time with def keyword | def hello()
+
+Function which does not have name is called -- Lambda Function OR Anonymous
+
+
+Lambda 3 main concept --> filter , map , reduce
+
+Python Decorater
+
+CREATING OWN MODULE
