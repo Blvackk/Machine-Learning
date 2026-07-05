@@ -1,0 +1,1015 @@
+================
+Machine Learning
+================
+
+(1-05-26)
+
+
+MACHINE LEARNING 
+     |
+ _________________________________________________________
+|                                                         |
+SUPERVISED LEARNING                                     UNSUPERVISED LEARNNING
+          |                                                       | 
+ _________v___________                                         CLUSTERING
+|                     |
+CLASSIFICATION       REGRESSION
+
+
+
+
+7 STEPS  OF MACHINE LEARNING ==>
+1. GATHERING DATA
+2. PREPARING THAT DATA
+3. CHOOSING A MODEL
+4. TRAINING
+5. EVALUATION
+6. HYPERPARAMETER TUNING
+7. PREDICTION
+
+
+Machine learn using help of library --> sckit learn , xgboost , lgbm
+ML Framework:
+sklearn
+xgboost
+lgbm
+
+
+Training phase 
+Testing phase
+
+
+ML PIPELINE -->
+
+1. We must have dataset to build ML Model
+2. Attribute understanding of the dataset | business understanding clear
+3. Divide the dataset into x-- iv & y-- dv
+4. x --> x-train & x-test
+5. y --> y-train & y-test
+6. Split ratio : 80-20, 70-30, 75-25 
+
+
+IF DEPENDENT VARIABLE IS CONTINUOUS THEN WE USE REGRESSION , if its binary we use CLASSIFICATION
+
+
+
+
+
+
+(2-05-26)
+
+Transformer -- sklearn.impute import SimpleImputer --> library will fill missing value data has any missing value
+
+
+Simple Imputer -->Simple Imputer is a pre-processing tool in scikit-learn that is used to fill (impute) missing values (NaN) in a dataset.
+
+
+FIT & Transform --> FIT will fill the all empty values present in the data and transform it.
+
+
+LabelEncoder --> LabelEncoder is a preprocessing tool in scikit-learn that converts categorical (text) values into numerical values.
+
+
+random_state=0 is used to make your results reproducible. It ensures that every time you run your code, the "random" operations produce the same output.
+Agar random state =0 nai rega tho , har baar model ka training update hote rega jiss ke karan model ki accuracy me changes aate rhenege.
+ 
+
+
+
+
+
+(4-05-26)
+
+ 
+========================
+SIMPLE LINEAR REGRESSION
+========================
+
+[ Y= MX+C ]
+
+Y --> it is the MEAN of Y column
+X --> it is the MEAN of X column
+M(Slope) =>  summation (x - x^) (y - y^) / summation (x -x^)^2
+
+
+MEAN SQUARE ERROR ==>
+Distance between ACTUAL & PREDICTED VALUE
+
+
+
+
+
+(5-05-26)
+
+build the model  -- we need to train the data
+
+x_train & y_train --> BIAS
+Training part of a MODEL is called [BIAS]
+Testing part of a MODEL is called [VARIANCE]
+
+
+Every model has 3 score 
+MODEL SCORE
+BIAS SCORE 
+VARIANCE SCORE
+
+
+=====
+model score -- 0.94 | training score (bias) -- 0.94 | testing score (variance) -- 0.98
+this all lie under same consequence , hence it is a BEST FIT MODEL
+
+model score  -- 0.94 | bias  -- 0.3 | variance  -- 0.98 [ low Bias high Variance]
+this is OVERFITTING TECHNIQUE 
+
+
+model score  -- 0.94 | bias  -- 0.92 | variance  -- 0.4 [ high Bias low Variance ]
+this is UNDERFITTING TECHNIQUE 
+
+
+if model OverFit then ==>
+1. pca ( principle component analysis)
+2. regularization technique
+3. cross validation
+4. drop out the neuron --( deep learning)
+5. ensemble learning
+
+
+if model UNDERFITS then ==>
+ we need to add more relevant attribute
+
+
+
+
+(6-05-26)
+
+If I wanted pass this code to Frontend , let me convert all  code & regression model has parameter I will convert to pickle file.
+When pickle file then entire Python code ( object --> regression converted to byte file )
+
+
+
+(7-05-26)
+
+joblib is library for SERIALIZATION
+joblib.dump
+joblib.load
+
+
+
+
+
+(8-05-26)
+Created Project of Student Mraks Prediction
+
+
+
+
+(11-05-26)
+
+MULTI LINEAR REGRESSION ALGORITHM
+
+Simple linear -- x,y | multiple linear regression -- many independent & i dependent
+
+y = mx+ c
+y = m1x1 + m2x2 + m3x3 + c
+ 
+
+
+MULTIPLE LINEAR REGRESSION MODELS
+
+1.Multiple Linear Regression model
+2.RFE ( Recursive Feature Elimination)
+
+
+statsmodel.api -- application programme interface
+statsmodel.api -- I will calculate regression table
+
+model generated value > p-value (0.05) -- reject the null hypothesis (eliminate the attribute)
+
+backward elimination or recursive feature elimination
+
+
+
+
+(12-05-26)
+
+
+REGULARIZATION TECHNIQUE ==>
+
+
+Overfitting - When the model trained with more attribute
+model OverFit then ==>
+1. pca ( principle component analysis)
+2. regularization technique
+3. cross validation
+4. drop out the neuron --( deep learning)
+5. ensemble learning
+
+
+REGULARIZATION is the concept in which High coefficient is converted to Low coefficient
+It is of 3 types :-
+1. Ridge Regularization ==> l2 regression | l2 regularization
+2. Lasso Regularization ==> l1 regression | l1 regularization
+3. Elastic net ==> ( l1 + l2 )
+
+
+Ridge or l2 --> Scale down High Coefficient to Low Coefficient to reduce the overfitting technique
+   [ Ridge =  Loss + ||W||^2 (penalty) ]
+this will bring coefficient up to 0  but not possibly 0
+
+
+Lasso or l1  --> Scale down high coefficient to 0
+  [ Lasso =  Loss + ||W|| (penalty) ]
+this will bring coefficient to 0
+
+
+
+Every ML model has inbuild parameter l1  & l2 --> very powerful
+in GENERATIVE AI , Regularization concept is called " wd (WEIGHTED DECKEY)" 
+
+
+Elastic Net  --> Loss + ||W||^2 + ||W||
+
+
+
+
+===========
+LINEAR MODEL :-
+============
+Simple Linear Regression
+Multiple Linear Regression
+Lasso | l1 regression --> reduce coefficient to 0
+Ridge | l2 regression --> reduce coefficient up to 0
+Gradient descend
+Stochastic Gradient descend
+Batch Gradient descend
+Time Series
+
+
+================
+NON LINEAR MODEL  :-
+================
+Polynomial
+Support Vector Regression
+K Nearest Neighbour Regressor
+Decision Tree Regressor
+Random Forest Regressor
+
+
+
+
+
+(13-05-26)
+
+Agenda for today session -->
+
+Feature Scaling
+Bias v/s Variance
+Gradient descend
+Stochastic Gradient descend
+Batch Gradient descend
+
+
+Feature Selection v/s Feature Engineering v/s Feature Scaling
+
+
+Feature Selection ==>
+  columns == attribute == feature == dimension
+  RFE (Recursive Feature Elimination using p-value)
+  lasso regression we have elimination coef are 0
+
+
+
+Feature Engineering ==> EDA Technique
+  Variable Identification | Univariate | Bivariate (Corelation)
+  Missing Value Treatment | Imputation Technique | Outlier treatment
+
+
+
+===============
+Feature Scaling ==>
+===============
+ sklearn.model import preprocessing
+
+It is divided into 2 types -->
+1. Standard Scalar | z-score | range -3 to 3
+2. Normalization | min max scaler | range 0 to 1
+
+
+Normalization is one of feature scaling technique which implement in ML model to get Highest accuracy.  It normalize value & shift it between 0 to 1
+Hence, Normalization also called as ( normalizer OR  min max scaler )
+
+
+Standarization is another feature scaling technique in which 
+  standard scaler because apply z-score
+  In ML , every value are shifted between -3 to 3 
+
+For every model you can apply both ,
+but 1st priority is always given to [ standardization ] bcoz -> it follows GAUSIAN DISTRIBUTION
+then Normalization -> does not follow GAUSIAN DISTRIBUTION
+
+
+close training - low bias
+far testing - high variance
+LOW BIAS HIGH VARIANCE == OVERFITTING
+
+close testing - low variance
+far training - high bias 
+HIGH BIAS LOW VARIANCE == UNDERFIT
+
+
+
+Whatever ML Model we build we must apply Feature Scaling Technique ==>
+
+
+ML few algorithm doesn't  required Feature Scaling such as ===>
+Tree Algorithm -
+  Decision tree
+  Random Forest
+  xgboost
+  lightgbm
+   
+
+Navie Byes -
+ Gausian Navie bayes doesn't required Feature Scaling
+  
+
+
+======================
+Optimization Algorithm ==>
+=======================
+
+
+Gradient descend v/s Stochastic Gradient descend v/s Batch Gradient descend
+
+This 3 concepts we can apply in DL , ML & Gen AI
+
+
+List of Optimizers used in DL & Gen ai ->
+https://keras.io/api/optimizers/
+
+
+{ MAE is also called  LOSS FUNCTION
+  MSE is also called  COST FUNCTION }
+
+
+
+Learning rate --> Step count for one cost to another cost function to reach global minimun,
+if the step count is large we miss the reach global ( take more time )
+MOMENTUM in Gradient Descend
+
+What is Gradient Descend ?
+Gradient descend is an algorithm that finds best fit line for given training data set.
+It is a optimiation algorithm to reach global minimum to find out best fit line.
+GD every records in( 3 datapoints) -- 3 time cost computation
+
+
+Assume , when you work with million point --> will you work manually ?
+so , there is thing called "Stochastic Gradient descend" 
+
+
+Stochastic Gradient descend is reach global by calculate cluster of random point take the mean of it then calculate COST FUNCTION
+
+Batch Gradient descend  is reach global minimum by calude batch of point& take calculate cost function.
+
+
+
+#
+gtts --> google text to speech
+pyttsx3 --> python text to speech
+frontend --> build text - speech bot 
+
+
+
+(14-05-26)
+
+
+
+# IF data is very less then we can build the model without using train_test_split
+
+
+We have built 3 model
+lin_reg --> holds linear algo 
+
+
+lin_reg --- hold linear regression algo with 1 degree (actual != predict)
+            lin_reg  model prediction more salary for 6.5 level
+
+poly_reg --- 2nd degree
+
+lin_reg --- in hhave 2nd degree
+
+testcase 1 : linear regression model -- degree 1 - 6.5 level -- model predicted :3.30L
+testcase 2 : poly model with 2nd degree -- 6.5 level -- model prediction 189k
+testcase 3 :  poly model 3th degree -- 6.5 level -- model prediction 133k
+testcase 4 : poly model 4th degree -- 6.5 level -- model prediction 158k
+testcase 5 : poly model 5th degree -- 6.5 level -- model prediction 174.8k
+testcase 6 : poly model 6th degree -- 6.5 level -- model prediction 174.1k
+
+
+Most of use case model accuracy will increase based on " HYPERPARAMETER TUNNING "
+
+
+
+
+
+
+(15-05-26)
+
+REGRESSION ( SUPPORT VECTOR REGRESSION ALGORITHM )
+CLASSIFICATION (SUPPORT VECTOR MACHINE)
+ svr & svm --> both are same concepts
+
+In,
+svr -- dataset is -- dependent variable(dv) is continuous
+svm -- dataset is binary -- dv is binary
+
+
+SLR v/s SVR
+slr -- y = mx+c
+svr -- y = wx+b
+
+
+Hyperplane - in Simple Linear Regression , the best fit Line is called "HYPERPLANE",  the point which closer to hyperplane is called "SUPPORT VECTOR"
+Decision Boundary (Support Vector Line)
+Hyperplane oneside of point -- +ve & other side plane is called -ve distance
+distance between 2 support vecctor line is called "MARGINAL DISTANCE"
+
+
+Marginal Distance = distance between 2 support vector line, the distance must be always maximum bcoz it adjust more error i.e maximum error
+
+everytime we need to check maximum marginal hyperlane 
+1. Hyperplane
+2. decision boundary or svr line
+3.marginal distance is always max i.e max marginal distance
+4. to adjust the error to increase mpre accuracy
+
+
+
+KERNEL FUNCTION :- it would help non-linear dataset to linear dataset
+kernel{'linear', 'poly', 'rbf', 'sigmoid', 'precomputed'} or callable, default='rbf'
+by  default degree = 3 applied
+
+
+Testcase 1 : kernel:'rbf',degree:3 , gamma:'scale' C: 1.0 --- 6.5 level ---model predicted: 1.3L  not accurate
+
+Testcase 2: kernel:'sigmoid', degree:4, gamma:'auto', C:10.0 --- model predicted: 1.29L not accurate
+
+Testcase 3 : kernel='poly',degree=4,C=10.0, -- model predicted : 1.68L 
+
+Testcase 4 : kernel='poly',degree=4,C=10.0,gamma='auto' -- model predicted :1.75L
+
+
+
+(16-05-26)
+
+
+KNN (K Nearest Neighbour)
+
+Testcase 1 : knn n_neighbors = 5 : accuracy, auto algo, p=2 , weight uniform --6.5 level - 168k 
+Testcase 2: weight : distance , level -- 6.5, 175.3k
+Testcase 3 : p = 1,n_neighbors=3 , level -- 6.5 , 153.333K
+Testcase 4 : p = 1, weights='distance'  , level ---6.5, 175K
+
+
+
+==============
+TREE ALGORITHM in Machine Learning
+==============
+
+CART ALGORITHM ( CA - Classification & RT -Regression )
+
+Decision Tree
+Random Forest
+xgboost
+
+
+
+(18-05-26)
+
+RESUME PROJECT
+
+
+
+(19-05-26)
+
+
+PYTHON FUNCTIONS
+
+inbuild() -- type() , max() , min() , range()
+
+user define() -- def keyword
+
+define the function
+print the statement
+call the function
+
+In Function ,  use return keyword most of the time
+
+
+
+
+
+(20-05-26)
+
+
+Local v/s Global Variable
+
+Local Variable --> defin the variable inside the function
+Global Variable --> defin variable outside of the function
+
+
+
+    Variable V/S Local Variable V/S Global Variable
+
+
+Local Variable
+Global Variable
+Global Keyword ( passes the Global Variable to Local Variable )
+
+
+RECURSION -->
+sys.setrecursionlimit(limit_value) :By default, Python sets this limit to 1000 to prevent an infinite loop from overflowing the C stack and crashing the interpreter.
+
+sys.getrecursionlimit() returns the current maximum depth of the Python interpreter's call stack
+
+
+(21-05-26)
+
+
+1. Lambda Function
+2. Decorator
+3. Inbuild Module
+
+
+Anonymous Function | Lambda
+
+
+inbuild every time with def keyword | def hello()
+
+Function which does not have name is called -- Lambda Function OR Anonymous
+
+
+Lambda 3 main concept --> filter , map , reduce
+
+Python Decorater
+
+CREATING OWN MODULE
+
+
+
+
+(22-05-26)
+
+EDA LLM Project
+
+
+
+
+(26-05-26)
+
+Performance measure of Regression Model ==> R2 & Adjusted R2\
+Performance measure of Classification ==> Confusion Matrix
+
+
+Confusion Matrix will be build on (Actual & Predicted)
+
+
+TN --> true - -ve
+FP --> false - +ve   [ TYPE-1 ERROR ]
+FN --> false - -ve   [ TYPE-2 ERROR ]
+TP --> true - +ve
+
+
+ACCURACY = tp + tn / Total 
+            OR
+         = tp + tn / ( tp + tn + fp +fn )
+
+ERROR =  1- ACCURACY
+          OR
+        = fp + fn / ( tp + tn + fp + fn )
+
+
+PRECISION = tp / predicted yes
+
+RECALLED = tp  / actual yes
+
+f1 score =  2 * ( precision * recall ) / ( precision + recall )
+
+
+
+===================
+LOGISTIC REGRESSION
+===================
+
+1.  Logistic Regression is regression model or classification model ?
+Ans = if the data has no outlier  then it is LOGISTIC REGRESSION
+ if the data has outlier then it is CLASSIFICATION REGESSION
+
+every dataset we check the data has outlier or not --
+Logistic regresssion is a classification model
+
+Range od Sigmoid function will be 0 -1
+in deep learning we call it "SIGMOID ACTIVATION FUNCTION"
+
+
+Testcase-1 : 25 test sample, with standarziation -- ac -89%
+Testcase-2 : 25% testing -- without scale -- ac -89%
+Testcase-3 : 25% testing -- with Normalizer -- ac -68%
+Testcase-4 : 20% testing -- with scaling -- ac-- 92.50
+Testcase-5 : can you change randomm state -100,51,41,11,0 with 205 testing
+ Random state = 0 will always give best case
+
+
+
+(27-05-26)
+AUC or ROC Curve
+
+AUC -- area under curve
+ROC -- receiver operating character
+
+
+auc & roc is the graph of CONFUSION MATRIX of the model
+
+x-axis --> fpr (false +ve rate)  ==> it is called SENSITIVITY !
+y- axis --> tpr (true -ve rate)  ==> 1- specificity
+
+
+
+                  FORMULAS!
+
+[ RECALL SENSITIVITY = TP/ FN+ TP ==> TP/P ]
+[ FALSE POSITIVE RATE (FPR) = FP / TN +FP ]
+[ SPECIFICITY =TN/TN + FP ==> TN/ N ==> 1- FPR ]
+
+
+
+
+
+(28-05-26)
+
+SVR - Support Vector Regressor
+SVM - Support Vector Machine
+
+
+(29-05-26)
+
+KNN
+
+
+How to handle imbalanced data ==> SMOTE technique
+Synthetic
+Minority
+Oversampling
+Technique
+
+
+does outlier impact KNN model --> YES
+does outlier impact LOGISTIC MODEL --. NO [ outlier -- sigmoid function ]
+
+
+Implementation of 2 different Algorithm on same dataset , leads to have  differ in algorithm
+
+
+
+
+
+(1-06-26)
+
+NAVIES BAYES
+
+
+=======================
+CONDITIONAL PROBABILITY
+=======================
+
+
+P(A|B) = P(A intersection B )   
+         --------------------    ==> p(A) &p(B) both are independent of each other.
+            P(B)
+
+
+read as, to find the probability of A , event B has already occurred.
+
+
+
+
+==============
+BAYES THEOREM :
+==============
+
+
+POSTERIOR  LIKELIHOOD
+  ^        ^
+  |        |
+  |        |
+P(A|B) = P(B|A) * P(A) -----> PRIOR
+         _____________
+               P(B)
+                 |
+                 |
+                 V
+             MARGINAL
+
+
+
+
+Types of NAVIES BAYES 
+1. Bernoulli navies bayes
+2. gaussian navies bayes  --- GB Navies bayes doesn't require Feature Scaling
+3. multinomial navies bayes
+
+
+
+
+
+(2-06-26)
+
+
+==============
+TREE ALGORITHM
+==============
+
+
+How to find out root node from the dataset ?
+=> 1. Understand business or attribute
+2. Classify the dependent & independent variable
+3. We need to calculate the INFORMATION GAIN (IG) of dependent variable 
+4. Now we need calculate GAIN of independent variable
+5. GAIN ==> IG - ENTROPY of independent variable E(A) 
+
+
+ROOT NODE is always a INDEPENDENT variable & it never will be DEPENDENT variable
+
+Independent variable which has The high GAIN is considered as ROOT node !
+
+
+
+How to find leaf node from the dataset ?
+=> In a Tree if any one side of the tree has 0 then consider it as a LEAF NODE , bcoz from 0 there will be no further extension of the tree !  This concept is called "PURITY SPLIT"
+Once , we declare leaf node (tree wont grow anymore)
+
+
+GINI INDEX => is one of criteria which acts like ENTROPY
+In entropy we have LOG computation
+
+
+PRUNNING TECHNIQUE ==> When you build a tree in-depth ,it will leads OVERFITTING !
+so we remove the feature acts as feature elimination.
+
+Every time we need to build the model with relavent attribute
+
+
+
+==
+information gain calculation
+entropy calculation
+gain calculation
+gini index
+max_depth - depth of the tree
+min_sample_split --2
+pruning
+leaf node
+purity split
+How to declare root node & leaf node
+
+
+[ Tree Algorithm does not required "FEATURE SCALING" ]
+
+
+
+
+
+
+
+(3-06-26)
+
+=================
+ENSAMBLE LEARNING
+=================
+
+
+pca | cross validation | ensamble learning
+
+
+
+ENSAMBLE LEARNING using ==>
+
+--> Different Algorithm : 1 dataset multiple model -- combine all model score (this is called STRONG LEARNING)
+
+--> Different Training Dataset : 1 Algorithm & Different Dataset
+
+
+           ENSAMBLE LEARNING
+                   |
+                   |
+ ____________________________________________
+|                                            |
+Bagging & Voting                          Boosting & Voting                     
+ |                                           |           
+Random Forest           _______________________________________________________________
+                       |              |               |                |               |   
+                    AdaBoost   Gradient Boosting    XGBoost        CatBoost        LightGBM
+                                  Machine(GBM)     (Extreme      (Categorical    (Light
+                                                    Gradient        Boosting)   Gradient
+                                                    Boosting)                    Boosting
+                                                                                 Machine)
+
+
+BAGGING TECHNIQUE => It is an ensemble machine learning method that reduces model variance and prevents overfitting
+Bootstrapping: The algorithm generates multiple subsets of the original dataset by sampling data points randomly with replacement. This means specific data points can appear multiple times in a single subset, or not at all
+
+BOOSTING TECHNIQUE => Boosting is a powerful ensemble machine learning technique that builds a highly accurate "strong learner" by combining a sequence of simpler, less accurate models called "weak learners" (typically shallow decision trees)
+
+
+
+
+Q. Why decision tree is in-depth ?
+Q. Why boosting is Sequential ?
+
+
+PROJECT :-
+CHURN PROJECT using XGBoost
+
+
+
+
+(4-06-26)
+Python to MySQL integration
+
+1. Established the connection (python - MySQL)
+2.Display list of databases Python
+3.We have create database using python script
+4.We have created student  table
+
+
+tkinter -- gui  framework (frontend)
+backend -- sql | front --tkinter
+
+
+
+(5-06-26)
+
+tkinter --> it is a just GUI app for Frontend creation
+
+
+==================
+Exception Handling
+==================
+
+
+three type of Exception Handling =>
+1.Compile time error  --> Error happened rom user side
+2.Logical error   --> 2+3=5
+3.Run time error  ---> CODE
+
+if try block gives error  => then it except exception block & print the message
+if try block no error  => then skip the exception block & prints the message
+
+
+
+Finally Block --> always close the connection that is why important keywords in exception handling
+
+
+
+CROSS VALIDATION ==>
+When model overfitting then we implement cross validation
+
+
+
+
+
+(6-06-26)
+
+
+K fold CV practical
+
+
+
+Model Tunning -->
+ Grissearch cv
+ Random search cv
+
+What is model Tunning ?
+We already have model 
+   SVM( I build parameter those in-build para has samoe set up value )
+     can I  change the based on best parameter
+
+
+We are building Ml model ?
+After build the model we have use gridsearch CV
+it again retrain the SVM model with new assigned parameter give by developer 
+
+
+
+(8-06-26)
+
+
+==========
+CLUSTERING 
+==========
+
+
+
+Regression -- dv is continuous (price)
+Classification -- dv is binary (WIN | LOSS )
+Clustering
+
+
+Supervised Learning --> reg & Classification Model
+Unsupervised Learning --> image , video , audio
+
+DA
+
+[ DATASET WHICH DOESN'T CONTAIN DEPENDENT VARIABLE THAT ALSO CONSIDER AS " UNNSTRUCTURE " ]
+
+CLUSTERING -
+k means
+hierarchal
+dbscan 
+pca
+
+
+
+
+K-MEANS :
+ 
+
+
+Centroid 
+New centroid calculation
+Euclidian Distance
+
+
+Steps =>
+1. Choose the number k of clusters
+2. Select at random k points , the centroids (not necessarily from your dataset)
+3. Assign each data point to the closet centroid ==> That forms K clusters
+4. Compute & place the new centroid of each cluster
+3. Reassign each data point  to the new closest centroid. If any reassignment took place, go to Step 4, otherwise go to FIN 
+
+
+k means can be applied to numerical , categorical , image data & text data
+
+
+How to decide how many cluster ?
+-> Elbow method or elbow graph
+
+
+ELBOW METHOD ==> In this graph , x-axis -- number of cluster & y-axis -- WCSS (within cluster sum of squared )
+
+
+
+centroid
+new centroid calculation
+less value will goes to the cluster
+eucilidian distance apply
+elbow graph => x-axis -- number of cluster & y-axis -- WCSS
+wcss -- withon cluster sum of squared
+
+
+
+
+
+(9-06-26)
+
+
+
+hierarchal clustering
+dbscan clustering
+pca clustering
+
+
+=====================
+Hierarchical Clustering
+=====================
+
+It is of 2 types :-
+
+1. Agglomerative Clustering -- we are build the cluster based on neighbour point & make group bottom to top approach.
+
+2. Divisive Clustering -- Divide the cluster
+
+
+k Means v/s Hierarchical  Cluster
+k means has centroid , wheras Hierarchical cluster doen't have centroid
+
+
+=================
+dbscan Clustering
+=================
+
+ DENSITY BASED SPEITAL CLUSTER APPLICATION WITH NOISE
+core point &  Boundary point 
+min point  --- only 3 point  , noise point -- outlier
+
+===
+pca
+===
+PRINCIPAL COMPONENET ANALYSIS
+
+when model overfit then we implement PCA
+also pca use for clustering
+
+
+Overfitting & Clustering - How ?
+-> Cluster which has higher Eigen Value & Eigen Vector that will consider to build ML model
